@@ -4,3 +4,5 @@
 - Code VS
 - MySQL
 - Python
+- HTML
+- CSS
