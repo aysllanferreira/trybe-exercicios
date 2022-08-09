@@ -1,0 +1,38 @@
+body {
+  font-size: 16px;
+}
+
+.centro {
+  text-align: center;
+}
+
+h1 {
+  font-size: 65px;
+  text-decoration: darkcyan;
+  color: orange;
+  font-family: sans-serif;
+}
+
+p {
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.changecolor {
+  background-color: green;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.brown {
+  background-color: brown;
+  color: white;
+}
