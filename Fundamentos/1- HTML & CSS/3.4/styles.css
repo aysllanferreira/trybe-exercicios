@@ -1,0 +1,19 @@
+.img{
+    width: 300px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section{
+    text-align: center;
+    padding: 2%;
+}
+
+section#info{
+    text-align: left;
+}
+
+.centro{
+    text-align: center;
+}
