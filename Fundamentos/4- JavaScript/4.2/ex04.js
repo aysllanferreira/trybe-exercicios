@@ -7,7 +7,7 @@ for (let c = 0; c < numbers.length; c++) {
 
 let media = soma / numbers.length;
 
-if (media > 20) {
+if (media >= 20) {
   console.log("Valor maior que 20");
 } else {
   console.log("Valor menor ou igual a 20");
