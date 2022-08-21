@@ -1,5 +1,5 @@
-let n = 5;
-let c = 5;
+let n = 15;
+let c = n;
 let ast = "";
 let esp = "";
 
