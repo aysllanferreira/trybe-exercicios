@@ -113,6 +113,25 @@ const addLegTasks = (cor) => {
   createLeg.style.backgroundColor = cor;
   getTaskDiv.appendChild(createLeg);
 };
+
+let clicado = 0;
+// Funcao que seleciona uma tarefa mudando sua classe
+const selectTasks = (mouse, classe, classe2) => {
+  let getTask = document.getElementsByClassName("task")[0];
+
+  getTask.addEventListener(mouse, () => {
+    if (clicado === 0) {
+      getTask.className = classe;
+      console.log(getTask);
+      clicado = 1;
+    } else {
+      getTask.className = classe2;
+      console.log(getTask);
+      clicado = 0;
+    }
+  });
+};
+
 // Criacao do calendario
 const calendar = () => {
   let ulMonth = createElements(criaUl);
@@ -132,6 +151,8 @@ const calendar = () => {
 
   myTasks("Cozinhar");
   addLegTasks("blue");
+
+  selectTasks("click", "task selected", "task");
 };
 
 calendar();
