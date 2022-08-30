@@ -214,4 +214,3 @@ addColourToDay("click", "rgb(119,119,119)");
 createCompromissos("click");
 
 keyPressed();
-console.log(keyPressed());
