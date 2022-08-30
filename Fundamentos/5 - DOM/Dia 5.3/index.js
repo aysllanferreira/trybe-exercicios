@@ -174,7 +174,6 @@ const createCompromissos = (mode) => {
   let inputContainer = document.getElementsByClassName("input-container")[0];
   let getCompro = document.getElementById("btn-add");
   let getInput = document.getElementById("task-input");
-  console.log(inputContainer);
 
   getCompro.addEventListener(mode, () => {
     if (getInput.value === "") {
