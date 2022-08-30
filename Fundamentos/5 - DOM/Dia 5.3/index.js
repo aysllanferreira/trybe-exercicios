@@ -65,14 +65,19 @@ let changeBg = (feriado, cor) => {
   }
 };
 
+// Funcao para chamar dinamicamente uma classe
+let callClass = (idsx) => {
+  return document.getElementById(idsx);
+};
+
 // Mudando cor dos feriados atraves do EventListener
 let clicked = 0;
-let changeColour = () => {
-  let getButton = document.getElementById("btn-holiday");
+let changeColour = (classeBotao, corBotao, classeCor) => {
+  let getButton = callClass(classeBotao, corBotao);
   getButton.addEventListener("click", () => {
-    let getHolidays = document.getElementsByClassName("holiday");
+    let getHolidays = document.getElementsByClassName(classeCor);
     if (clicked === 0) {
-      changeBg(getHolidays, "red");
+      changeBg(getHolidays, corBotao);
       clicked = 1;
     } else {
       changeBg(getHolidays, "rgb(238,238,238)");
@@ -90,7 +95,8 @@ const calendar = () => {
 
   createButton("Feriados", "btn-holiday");
   createButton("Sexta-feira", "btn-friday");
-  changeColour();
+  changeColour("btn-holiday", "red", "holiday");
+  changeColour("btn-friday", "green", "friday");
 
   body.appendChild(ulMonth);
 };
