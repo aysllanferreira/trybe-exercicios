@@ -23,31 +23,38 @@ const checkFriday = (value) => {
   return value === 4 || value === 11 || value === 18 || value === 25;
 };
 
+// Adiciona os dias do calendario no elemento li.
+let addDaysElements = (lista, elemento, myUl) => {
+  lista.innerText = elemento;
+  myUl.appendChild(lista);
+};
+
+// Verifica se eh feriado, dia comum ou sexta-feira
+let verifyDays = (uls) => {
+  for (let i = 0; i < decemberDaysList.length; i += 1) {
+    let liMonth = createElements(criaLi);
+    if (checkFriday(decemberDaysList[i]) && checkHoliday(decemberDaysList[i])) {
+      liMonth.className = "day friday holiday";
+      addDaysElements(liMonth, decemberDaysList[i], uls);
+    } else if (checkFriday(decemberDaysList[i])) {
+      liMonth.className = "day friday";
+      addDaysElements(liMonth, decemberDaysList[i], uls);
+    } else if (checkHoliday(decemberDaysList[i])) {
+      liMonth.className = "day holiday";
+      addDaysElements(liMonth, decemberDaysList[i], uls);
+    } else {
+      liMonth.className = "day";
+      addDaysElements(liMonth, decemberDaysList[i], uls);
+    }
+  }
+};
 // Criacao do calendario
 let calendar = () => {
   let ulMonth = createElements(criaUl);
   ulMonth.id = "days";
 
-  for (let i = 0; i < decemberDaysList.length; i += 1) {
-    let liMonth = createElements(criaLi);
-    if (checkFriday(decemberDaysList[i]) && checkHoliday(decemberDaysList[i])) {
-      liMonth.className = "day friday holiday";
-      liMonth.innerText = decemberDaysList[i];
-      ulMonth.appendChild(liMonth);
-    } else if (checkFriday(decemberDaysList[i])) {
-      liMonth.className = "day friday";
-      liMonth.innerText = decemberDaysList[i];
-      ulMonth.appendChild(liMonth);
-    } else if (checkHoliday(decemberDaysList[i])) {
-      liMonth.className = "day holiday";
-      liMonth.innerText = decemberDaysList[i];
-      ulMonth.appendChild(liMonth);
-    } else {
-      liMonth.className = "day";
-      liMonth.innerText = decemberDaysList[i];
-      ulMonth.appendChild(liMonth);
-    }
-  }
+  verifyDays(ulMonth);
+
   body.appendChild(ulMonth);
 };
 
