@@ -51,15 +51,15 @@ const verifyDays = (uls) => {
 };
 
 // Cria botao feriado
-const createButtonHoliday = (btnName) => {
-  let createButton = document.createElement("button");
-  createButton.id = "btn-holiday";
-  createButton.innerText = btnName;
-  getDivButton.appendChild(createButton);
+const createButton = (btnName, btnId) => {
+  let createNewButton = document.createElement("button");
+  createNewButton.id = btnId;
+  createNewButton.innerText = btnName;
+  getDivButton.appendChild(createNewButton);
 };
 
 // Funcao para mudar Background do Holiday
-let changeBgHoliday = (feriado, cor) => {
+let changeBg = (feriado, cor) => {
   for (let i = 0; i < feriado.length; i += 1) {
     feriado[i].style.backgroundColor = cor;
   }
@@ -67,15 +67,15 @@ let changeBgHoliday = (feriado, cor) => {
 
 // Mudando cor dos feriados atraves do EventListener
 let clicked = 0;
-let changeHolidayColour = () => {
+let changeColour = () => {
   let getButton = document.getElementById("btn-holiday");
   getButton.addEventListener("click", () => {
     let getHolidays = document.getElementsByClassName("holiday");
     if (clicked === 0) {
-      changeBgHoliday(getHolidays, "red");
+      changeBg(getHolidays, "red");
       clicked = 1;
     } else {
-      changeBgHoliday(getHolidays, "rgb(238,238,238)");
+      changeBg(getHolidays, "rgb(238,238,238)");
       clicked = 0;
     }
   });
@@ -88,8 +88,9 @@ const calendar = () => {
 
   verifyDays(ulMonth);
 
-  createButtonHoliday("Feriados");
-  changeHolidayColour();
+  createButton("Feriados", "btn-holiday");
+  createButton("Sexta-feira", "btn-friday");
+  changeColour();
 
   body.appendChild(ulMonth);
 };
