@@ -86,6 +86,17 @@ let changeColour = (classeBotao, corBotao, classeCor) => {
   });
 };
 
+// Efeito Hover ao passar o mouse por cima dos numeros.
+let hoverCalendar = (mouse, value) => {
+  let getDays = document.getElementsByClassName("day");
+
+  for (let i = 0; i < decemberDaysList.length; i += 1) {
+    getDays[i].addEventListener(mouse, () => {
+      getDays[i].style.fontSize = value;
+    });
+  }
+};
+
 // Criacao do calendario
 const calendar = () => {
   let ulMonth = createElements(criaUl);
@@ -99,6 +110,9 @@ const calendar = () => {
   changeColour("btn-friday", "green", "friday");
 
   body.appendChild(ulMonth);
+
+  hoverCalendar("mouseenter", "30px");
+  hoverCalendar("mouseleave", "20px");
 };
 
 calendar();
