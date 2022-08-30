@@ -98,12 +98,20 @@ const hoverCalendar = (mouse, value) => {
 };
 
 // Funcao para adicionar tasks
-
-let myTasks = (value) => {
-  let getTaskDiv = document.getElementsByClassName("my-tasks")[0];
+let getTaskDiv = document.getElementsByClassName("my-tasks")[0];
+const myTasks = (value) => {
   let createSpan = document.createElement("span");
-  createSpan.innerText = value;
+  createSpan.innerHTML = value;
   getTaskDiv.appendChild(createSpan);
+};
+
+// Adicionando legenda para tasks
+const addLegTasks = (cor) => {
+  let createLeg = document.createElement("div");
+
+  createLeg.className = "task";
+  createLeg.style.backgroundColor = cor;
+  getTaskDiv.appendChild(createLeg);
 };
 // Criacao do calendario
 const calendar = () => {
@@ -123,6 +131,7 @@ const calendar = () => {
   hoverCalendar("mouseleave", "20px");
 
   myTasks("Cozinhar");
+  addLegTasks("blue");
 };
 
 calendar();
