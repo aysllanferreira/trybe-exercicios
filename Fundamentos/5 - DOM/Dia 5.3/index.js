@@ -122,37 +122,56 @@ const selectTasks = (mouse, classe, classe2) => {
   getTask.addEventListener(mouse, () => {
     if (clicado === 0) {
       getTask.className = classe;
-      console.log(getTask);
+      //console.log(getTask);
       clicado = 1;
     } else {
       getTask.className = classe2;
-      console.log(getTask);
+      //console.log(getTask);
       clicado = 0;
     }
+    console.log(clicado);
   });
 };
 
-// Criacao do calendario
-const calendar = () => {
-  let ulMonth = createElements(criaUl);
-  ulMonth.id = "days";
+let newClick = 0;
+// Adiciona cor da tarefa ao dia clicado
+const addColourToDay = (acao, resetColour) => {
+  let getColour =
+    document.getElementsByClassName("task")[0].style.backgroundColor;
+  let getDays = document.getElementsByClassName("day");
 
-  verifyDays(ulMonth);
-
-  createButton("Feriados", "btn-holiday");
-  createButton("Sexta-feira", "btn-friday");
-  changeColour("btn-holiday", "red", "holiday");
-  changeColour("btn-friday", "green", "friday");
-
-  body.appendChild(ulMonth);
-
-  hoverCalendar("mouseenter", "30px");
-  hoverCalendar("mouseleave", "20px");
-
-  myTasks("Cozinhar");
-  addLegTasks("blue");
-
-  selectTasks("click", "task selected", "task");
+  for (let i = 0; i < getDays.length; i += 1) {
+    getDays[i].addEventListener(acao, () => {
+      if (newClick === 0) {
+        getDays[i].style.color = getColour;
+        newClick = 1;
+      } else {
+        getDays[i].style.color = resetColour;
+        newClick = 0;
+      }
+    });
+  }
 };
 
-calendar();
+// Criacao do calendario
+let ulMonth = createElements(criaUl);
+ulMonth.id = "days";
+
+verifyDays(ulMonth);
+
+createButton("Feriados", "btn-holiday");
+createButton("Sexta-feira", "btn-friday");
+changeColour("btn-holiday", "red", "holiday");
+changeColour("btn-friday", "green", "friday");
+
+body.appendChild(ulMonth);
+
+hoverCalendar("mouseenter", "30px");
+hoverCalendar("mouseleave", "20px");
+
+myTasks("Cozinhar");
+addLegTasks("blue");
+
+selectTasks("click", "task selected", "task");
+
+addColourToDay("click", "rgb(119,119,119)");
