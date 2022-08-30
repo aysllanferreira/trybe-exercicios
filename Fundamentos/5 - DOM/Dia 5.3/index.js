@@ -24,13 +24,13 @@ const checkFriday = (value) => {
 };
 
 // Adiciona os dias do calendario no elemento li.
-let addDaysElements = (lista, elemento, myUl) => {
+const addDaysElements = (lista, elemento, myUl) => {
   lista.innerText = elemento;
   myUl.appendChild(lista);
 };
 
 // Verifica se eh feriado, dia comum ou sexta-feira
-let verifyDays = (uls) => {
+const verifyDays = (uls) => {
   for (let i = 0; i < decemberDaysList.length; i += 1) {
     let liMonth = createElements(criaLi);
     if (checkFriday(decemberDaysList[i]) && checkHoliday(decemberDaysList[i])) {
@@ -48,12 +48,24 @@ let verifyDays = (uls) => {
     }
   }
 };
+
+// Cria botao feriado
+const createButtonHoliday = (btnName) => {
+  let getDivButton = document.getElementsByClassName("buttons-container")[0];
+  let createButton = document.createElement("button");
+  createButton.id = "btn-holiday";
+  createButton.innerText = btnName;
+  getDivButton.appendChild(createButton);
+};
+
 // Criacao do calendario
-let calendar = () => {
+const calendar = () => {
   let ulMonth = createElements(criaUl);
   ulMonth.id = "days";
 
   verifyDays(ulMonth);
+
+  createButtonHoliday("Feriados");
 
   body.appendChild(ulMonth);
 };
