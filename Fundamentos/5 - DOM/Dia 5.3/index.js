@@ -59,20 +59,20 @@ const createButton = (btnName, btnId) => {
 };
 
 // Funcao para mudar Background do Holiday
-let changeBg = (feriado, cor) => {
+const changeBg = (feriado, cor) => {
   for (let i = 0; i < feriado.length; i += 1) {
     feriado[i].style.backgroundColor = cor;
   }
 };
 
 // Funcao para chamar dinamicamente uma classe
-let callClass = (idsx) => {
+const callClass = (idsx) => {
   return document.getElementById(idsx);
 };
 
 // Mudando cor dos feriados atraves do EventListener
 let clicked = 0;
-let changeColour = (classeBotao, corBotao, classeCor) => {
+const changeColour = (classeBotao, corBotao, classeCor) => {
   let getButton = callClass(classeBotao, corBotao);
   getButton.addEventListener("click", () => {
     let getHolidays = document.getElementsByClassName(classeCor);
@@ -87,7 +87,7 @@ let changeColour = (classeBotao, corBotao, classeCor) => {
 };
 
 // Efeito Hover ao passar o mouse por cima dos numeros.
-let hoverCalendar = (mouse, value) => {
+const hoverCalendar = (mouse, value) => {
   let getDays = document.getElementsByClassName("day");
 
   for (let i = 0; i < decemberDaysList.length; i += 1) {
@@ -97,6 +97,14 @@ let hoverCalendar = (mouse, value) => {
   }
 };
 
+// Funcao para adicionar tasks
+
+let myTasks = (value) => {
+  let getTaskDiv = document.getElementsByClassName("my-tasks")[0];
+  let createSpan = document.createElement("span");
+  createSpan.innerText = value;
+  getTaskDiv.appendChild(createSpan);
+};
 // Criacao do calendario
 const calendar = () => {
   let ulMonth = createElements(criaUl);
@@ -113,6 +121,8 @@ const calendar = () => {
 
   hoverCalendar("mouseenter", "30px");
   hoverCalendar("mouseleave", "20px");
+
+  myTasks("Cozinhar");
 };
 
 calendar();
