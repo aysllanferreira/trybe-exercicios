@@ -153,6 +153,41 @@ const addColourToDay = (acao, resetColour) => {
   }
 };
 
+// Tecla pressionada
+const keyPressed = () => {
+  let inputContainer = document.getElementsByClassName("input-container")[0];
+  let getInput = document.getElementById("task-input");
+
+  let getKey = addEventListener("keypress", (ev) => {
+    const keyName = ev.key;
+    if (keyName === "Enter") {
+      let parCompro = document.createElement("p");
+      parCompro.innerText = getInput.value;
+      inputContainer.appendChild(parCompro);
+      getInput.value = "";
+    }
+  });
+};
+
+// Requisito Bonus
+const createCompromissos = (mode) => {
+  let inputContainer = document.getElementsByClassName("input-container")[0];
+  let getCompro = document.getElementById("btn-add");
+  let getInput = document.getElementById("task-input");
+  console.log(inputContainer);
+
+  getCompro.addEventListener(mode, () => {
+    if (getInput.value === "") {
+      alert("Erro! Compromisso em branco!");
+    } else {
+      let parCompro = document.createElement("p");
+      parCompro.innerText = getInput.value;
+      inputContainer.appendChild(parCompro);
+      getInput.value = "";
+    }
+  });
+};
+
 // Criacao do calendario
 let ulMonth = createElements(criaUl);
 ulMonth.id = "days";
@@ -175,3 +210,8 @@ addLegTasks("blue");
 selectTasks("click", "task selected", "task");
 
 addColourToDay("click", "rgb(119,119,119)");
+
+createCompromissos("click");
+
+keyPressed();
+console.log(keyPressed());
