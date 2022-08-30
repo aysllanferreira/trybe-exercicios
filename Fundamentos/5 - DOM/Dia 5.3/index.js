@@ -8,6 +8,7 @@ const decemberDaysList = [
 // Variaveis para criar os elementos.
 const criaUl = "ul";
 const criaLi = "li";
+let getDivButton = document.getElementsByClassName("buttons-container")[0];
 
 // Funcao para criar os elementos dinamicamente
 const createElements = (elements) => {
@@ -51,11 +52,33 @@ const verifyDays = (uls) => {
 
 // Cria botao feriado
 const createButtonHoliday = (btnName) => {
-  let getDivButton = document.getElementsByClassName("buttons-container")[0];
   let createButton = document.createElement("button");
   createButton.id = "btn-holiday";
   createButton.innerText = btnName;
   getDivButton.appendChild(createButton);
+};
+
+// Funcao para mudar Background do Holiday
+let changeBgHoliday = (feriado, cor) => {
+  for (let i = 0; i < feriado.length; i += 1) {
+    feriado[i].style.backgroundColor = cor;
+  }
+};
+
+// Mudando cor dos feriados atraves do EventListener
+let clicked = 0;
+let changeHolidayColour = () => {
+  let getButton = document.getElementById("btn-holiday");
+  getButton.addEventListener("click", () => {
+    let getHolidays = document.getElementsByClassName("holiday");
+    if (clicked === 0) {
+      changeBgHoliday(getHolidays, "red");
+      clicked = 1;
+    } else {
+      changeBgHoliday(getHolidays, "rgb(238,238,238)");
+      clicked = 0;
+    }
+  });
 };
 
 // Criacao do calendario
@@ -66,6 +89,7 @@ const calendar = () => {
   verifyDays(ulMonth);
 
   createButtonHoliday("Feriados");
+  changeHolidayColour();
 
   body.appendChild(ulMonth);
 };
