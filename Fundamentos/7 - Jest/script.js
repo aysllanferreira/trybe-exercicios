@@ -1,3 +1,7 @@
+const verifyBlankSpaces = () => {
+    
+}
+
 const sum = () => {
     const value1 = document.getElementById('value1').value;
     const value2 = document.getElementById('value2').value;
