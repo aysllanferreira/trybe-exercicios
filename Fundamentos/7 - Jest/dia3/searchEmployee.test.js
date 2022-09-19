@@ -1,6 +1,6 @@
 const searchEmployee = require("./searchEmployee");
 
-describe("Algo", () => {
+describe("Verifica se o id / dados estao sendo encontrados", () => {
   it("Verifica se searchEmployee eh uma funcao", () => {
     expect(typeof searchEmployee).toBe("function");
   });
