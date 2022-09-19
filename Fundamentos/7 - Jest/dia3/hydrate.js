@@ -4,7 +4,7 @@ const hydrate = (drink) => {
   let result;
 
   theDrink.forEach((element) =>
-    !isNaN(Number(element)) ? (drinks += Number(element)) : ""
+    !isNaN(Number(element)) ? (drinks += Number(element)) : null
   );
 
   drinks === 1
