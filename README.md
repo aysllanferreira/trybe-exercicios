@@ -38,7 +38,7 @@ Contém todas as atividades desenvolvidas por __[Aysllan Ferreira](https://www.l
 - [x] 5.6 - (Bônus) Projeto - Lista de tarefas
 - [x] 5.7 - (Bônus) Projeto - Meme Generator
 - [x] 5.7 - (Bônus) Projeto - Adivinhe a Cor
-- [ ] 5.7 - (Bônus) Projeto - Carta Misteriosa
+- [X] 5.7 - (Bônus) Projeto - Carta Misteriosa
 
 ### Section 6: HTML e CSS: Forms, Flexbox e Responsivo
 - [x] 6.1 - HTML & CSS - Forms
