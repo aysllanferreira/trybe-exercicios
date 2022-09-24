@@ -82,4 +82,10 @@ const books = [
     return nameBook;
   }
 
-  console.log(smallerName());
+//   console.log(smallerName());
+
+function getNamedBook() {
+    return books.find((element) => element.name.length === 26);
+  }
+
+  console.log(getNamedBook().name);
