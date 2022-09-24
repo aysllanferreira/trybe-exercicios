@@ -106,4 +106,13 @@ function someBookWasReleaseOnThe80s() {
     return books.some((element) => element.releaseYear >= 1980 || element.releaseYear <= 1989);
   }
 
-  console.log(someBookWasReleaseOnThe80s());
+//   console.log(someBookWasReleaseOnThe80s());
+
+function authorUnique() {
+    return books.every((element) =>
+      !books.some((element2) =>
+        (element2.author.birthYear === element.author.birthYear)
+        && (element2.author.name !== element.author.name)));
+  }
+  
+console.log(authorUnique());
