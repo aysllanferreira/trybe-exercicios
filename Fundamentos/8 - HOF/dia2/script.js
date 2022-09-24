@@ -95,3 +95,9 @@ function booksOrderedByReleaseYearDesc() {
   }
 
 //   console.log(booksOrderedByReleaseYearDesc());
+
+function everyoneWasBornOnSecXX() {
+    return books.every((element) => element.author.birthYear <= 2000 && element.author.birthYear >= 1900);
+  }
+
+  console.log(everyoneWasBornOnSecXX());
