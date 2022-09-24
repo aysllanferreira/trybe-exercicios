@@ -88,4 +88,10 @@ function getNamedBook() {
     return books.find((element) => element.name.length === 26);
   }
 
-  console.log(getNamedBook().name);
+//   console.log(getNamedBook().name);
+
+function booksOrderedByReleaseYearDesc() {
+    return books.sort((a,b) => b.releaseYear - a.releaseYear);
+  }
+
+//   console.log(booksOrderedByReleaseYearDesc());
