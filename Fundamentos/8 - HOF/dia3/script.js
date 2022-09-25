@@ -86,5 +86,9 @@ const fantasyOrScienceFictionAuthors = () =>  fantasyOrScienceFiction().map((ele
 
 const oldBooks = () => books.filter((element) => year - element.releaseYear >= 60).map((e) => e.name)
 
-console.log(oldBooks());
+// console.log(oldBooks());
+
+const authorWith3DotsOnName = () => books.find((element) => (element.author.name.split(' ').filter((e) => e.endsWith('.')).length === 3)).name;
+
+console.log(authorWith3DotsOnName());
 
