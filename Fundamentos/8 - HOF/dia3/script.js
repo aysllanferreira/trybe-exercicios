@@ -69,4 +69,9 @@ const formatedBookNames = () => books.map((element) => `${element.name} - ${elem
 
 const nameAndAge = () => books.map((element) => ({age : element.releaseYear - element.author.birthYear, author : element.author.name})).sort((e1, e2) => e1.age - e2.age);
 
-  console.log(nameAndAge());
+//   console.log(nameAndAge());
+
+const fantasyOrScienceFiction = () => books.filter((element) => element.genre === 'Ficção Científica' || element.genre === 'Fantasia');
+
+// console.log(fantasyOrScienceFiction());
+
