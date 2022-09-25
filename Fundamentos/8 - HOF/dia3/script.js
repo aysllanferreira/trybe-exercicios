@@ -78,5 +78,9 @@ const fantasyOrScienceFiction = () => books.filter((element) => element.genre ==
 const year = new Date().getFullYear();
 const oldBooksOrdered = () => books.filter((element) => year - element.releaseYear >= 60).sort((e1, e2) => e1.releaseYear - e2.releaseYear);
 
-console.log(oldBooksOrdered());
+// console.log(oldBooksOrdered());
+
+const fantasyOrScienceFictionAuthors = () =>  fantasyOrScienceFiction().map((element) => element.author.name).sort();
+
+console.log(fantasyOrScienceFictionAuthors());
 
