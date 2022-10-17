@@ -65,10 +65,10 @@ Contém todas as atividades desenvolvidas por __[Aysllan Ferreira](https://www.l
 ## Módulo 2: Desenvolvimento Front-end :heavy_check_mark:
 
 ### Section 1: JavaScript e Testes Assíncronos
-- [ ] 1.1 - JavaScript Assíncrono e Callbacks
-- [ ] 1.2 - JavaScript Assíncrono - Fetch API e async/wait
-- [ ] 1.3 - Jest - Testes Assíncrono
-- [ ] 1.4 - Projeto - Carrinho de Compras
+- [X] 1.1 - JavaScript Assíncrono e Callbacks
+- [X] 1.2 - JavaScript Assíncrono - Fetch API e async/wait
+- [X] 1.3 - Jest - Testes Assíncrono
+- [X] 1.4 - Projeto - Carrinho de Compras
 
 ### Section 2: Introdução ao React
 - [ ] 2.1 - 'Hello, world!' no React!
