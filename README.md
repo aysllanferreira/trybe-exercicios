@@ -71,40 +71,40 @@ Contém todas as atividades desenvolvidas por __[Aysllan Ferreira](https://www.l
 - [X] 1.4 - Projeto - Carrinho de Compras
 
 ### Section 2: Introdução ao React
-- [ ] 2.1 - 'Hello, world!' no React!
-- [ ] 2.2 - Componentes React
-- [ ] 2.3 - Projeto - Solar System
+- [X] 2.1 - 'Hello, world!' no React!
+- [X] 2.2 - Componentes React
+- [X] 2.3 - Projeto - Solar System
 
 ### Section 3: Componentes com Estado, Eventos e Formulários com React
-- [ ] 3.1 - Componentes com estado e eventos
-- [ ] 3.2 - Formulários no React
-- [ ] 3.3 - Projeto - Tryunfo
+- [X] 3.1 - Componentes com estado e eventos
+- [X] 3.2 - Formulários no React
+- [X] 3.3 - Projeto - Tryunfo
 
 ### Section 4: Ciclo de Vida de Componentes e React Router
-- [ ] 4.1 - Ciclo de vida de componentes
-- [ ] 4.2 - React Router
-- [ ] 4.3 - Projeto - TrybeTunes
+- [X] 4.1 - Ciclo de vida de componentes
+- [X] 4.2 - React Router
+- [X] 4.3 - Projeto - TrybeTunes
 
 ### Section 5: Metodologias Ágeis
-- [ ] 5.1 - Metodologias Ágeis
-- [ ] 5.2 - Projeto - Frontend Online Store
+- [X] 5.1 - Metodologias Ágeis
+- [X] 5.2 - Projeto - Frontend Online Store
 
 ### Section 6: Testes automatizados com React Testing Library
-- [ ] 6.1 - RTL - Primeiros passos
-- [ ] 6.2 - RTL - Mocks e Inputs
-- [ ] 6.3 - RTL - Testando React Router
-- [ ] 6.4 - Projeto - Testes em React
+- [X] 6.1 - RTL - Primeiros passos
+- [X] 6.2 - RTL - Mocks e Inputs
+- [X] 6.3 - RTL - Testando React Router
+- [X] 6.4 - Projeto - Testes em React
 
 ### Section 7: Gerenciamento de estado com Redux
-- [ ] 7.1 - Introdução ao Redux - O estado global da aplicação
-- [ ] 7.2 - Usando o Redux no React
-- [ ] 7.3 - Usando o Redux no React - Prática
-- [ ] 7.4 - Usando o Redux no React - Actions Assíncronas
-- [ ] 7.5 - Testes síncronos com React-Redux
-- [ ] 7.6 - Projeto - Trybe Wallet
+- [X] 7.1 - Introdução ao Redux - O estado global da aplicação
+- [X] 7.2 - Usando o Redux no React
+- [X] 7.3 - Usando o Redux no React - Prática
+- [X] 7.4 - Usando o Redux no React - Actions Assíncronas
+- [X] 7.5 - Testes síncronos com React-Redux
+- [X] 7.6 - Projeto - Trybe Wallet
 
 ### Section 8: Projeto Jogo de Trivia
-- [ ] 8.1 - Projeto - Jogo de Trivia
+- [X] 8.1 - Projeto - Jogo de Trivia
 
 ### Section 9: Context API e React Hooks
 - [ ] 9.1 - Context API do React
